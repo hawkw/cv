@@ -1,0 +1,102 @@
+%------------------------------------
+% Dario Taraborelli
+% Typesetting your academic CV in LaTeX
+%
+% URL: http://nitens.org/taraborelli/cvtex
+% DISCLAIMER: This template is provided for free and without any guarantee 
+% that it will correctly compile on your system if you have a non-standard  
+% configuration.
+% Some rights reserved: http://creativecommons.org/licenses/by-sa/3.0/
+%------------------------------------
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, a4paper]{article}
+\usepackage{fontspec} 
+
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{a4paper, textwidth=5.5in, textheight=8.5in, marginparsep=7pt, marginparwidth=.6in}
+\setlength\parindent{0in}
+\usepackage[usenames,dvipsnames]{color}
+% FONTS
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+\setromanfont [Ligatures={Common}, Numbers={OldStyle}]{Hoefler Text}
+\setmonofont[Scale=0.8]{Bitstream Vera Sans Mono} 
+\setsansfont[Scale=0.9]{Optima Regular} 
+% ---- CUSTOM AMPERSAND
+\newcommand{\amper}{{\fontspec[Scale=.95]{Hoefler Text}\selectfont\itshape\&}}
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{7pt}
+\reversemarginpar
+
+\usepackage{enumitem}
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\mdseries\Large\upshape} 
+\subsectionfont{\rmfamily\mdseries\large\upshape} 
+\subsubsectionfont{\rmfamily\mdseries\scshape\normalsize} 
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[xetex, bookmarks, colorlinks, breaklinks, pdftitle={Curriculum Vitae},pdfauthor={Eliza Weisman}]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} 
+
+% DOCUMENT
+\begin{document}
+{\LARGE Eliza Weisman}\\[.2cm]\noindent
+\noindent\begin{tabular}{@{}l l}
+990 First St. & Phone: \texttt{+1 (814)-853-1501}\\\noindent
+Meadville, PA, 16335 & Email: \href{mailto:eliza@elizas.website}{\texttt{eliza@elizas.website}}\\\noindent
+U.S.A.&\textsc{url}: \href{https://elizas.website}{\texttt{https://elizas.website}}\\\noindent
+\end{tabular}
+
+\section*{Areas of Interest}
+Systems programming and operating systems $\bullet$ functional programming $\bullet$ programming languages, compilers; design and implementation.
+
+%%\hrule
+\section*{Technologies}
+%Experience with functional programming techniques in a number of languages, and a focus on writing high-quality, idiomatic code. Familiarity with modern software development techniques, practices, and tools, and in a number of areas, such as web development, programming languages, and operating systems. 
+\begin{description}[font=\sc]
+\item[Languages:]{\textit{Fluent in} Rust, Haskell, Scala, and Java; \textit{familiar with} C \amper{} C++, Python, Lisp, x86 \amper{} x86\_64 assembly.}
+\item[Frameworks \amper{} Libraries:]{Scalatra, Slick, ScalaTest, ScalaCheck, QuickCheck, Swagger}
+\item[Tools:]{Travis CI, Jenkins, \LaTeX, git, bash, zsh, macOS, Unix/Linux.}
+\end{description}
+
+\section*{Education}
+
+\noindent\years{2012 -- 2017}\textsc{BS in Applied Computing}, 
+	Allegheny College, Meadville, PA\\
+%\\My coursework has included: \\
+    {\footnotesize
+   \noindent\begin{tabular}{l l}
+    Data Structures and Algorithms  & Analysis of Algorithms \\
+    Computer Organization & Operating Systems \\
+    Principles of Software Engineering & Data Communication and Networks \\
+    Principles of Data Management & Compiler Design\\
+    Programming Language Implementation & Robotics and Multi-Agent Systems\\
+\end{tabular} }
+
+%\hrule
+\section*{Experience \amper{} Projects }
+
+\noindent\years{2016 -- 2017}\href{https://www.github.com/an-cabal/an-editor}{An Editor} --- A terminal text editor currently being implemented in Rust. I designed the editor, and am responsible for a majority of implementation, as well as managing the project and using it to educate beginning programmers.\\
+\years{2015 -- 2017}\href{https://elizas.website/sos}{SOS} --- A toy operating system kernel for educational purposes. Notable as the first 64-bit x86 Rust OS with a boot sequence written entirely in Rust. \\
+\years{2015} \href{https://www.github.com/hawkw/seax}{Seax} --- a virtual machine for executing functional programs.
+
+\begin{center}
+{\scriptsize  Last updated: \today\- •\- Typeset in \href{http://nitens.org/taraborelli/cvtex}{
+\fontspec{Times New Roman}\XeTeX }\\
+% ---- FILL IN THE FULL URL TO YOUR CV HERE
+\href{https://elizas.website/resume}{elizas.website/resume}}
+\end{center}
+
+\end{document}

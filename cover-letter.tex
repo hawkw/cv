@@ -1,0 +1,62 @@
+%------------------------------------
+% Dario Taraborelli
+% Typesetting your academic CV in LaTeX
+%
+% URL: http://nitens.org/taraborelli/cvtex
+% DISCLAIMER: This template is provided for free and without any guarantee 
+% that it will correctly compile on your system if you have a non-standard  
+% configuration.
+% Some rights reserved: http://creativecommons.org/licenses/by-sa/3.0/
+%------------------------------------
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, a4paper]{letter}
+\usepackage{fontspec} 
+
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{a4paper, textwidth=5.5in, textheight=8.5in, marginparsep=7pt, marginparwidth=.6in}
+\setlength\parindent{0in}
+\usepackage[usenames,dvipsnames]{color}
+% FONTS
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+\setromanfont [Ligatures={Common}, Numbers={OldStyle}]{Hoefler Text}
+\setmonofont[Scale=0.8]{Bitstream Vera Sans Mono} 
+\setsansfont[Scale=0.9]{Optima Regular} 
+% ---- CUSTOM AMPERSAND
+\newcommand{\amper}{{\fontspec[Scale=.95]{Hoefler Text}\selectfont\itshape\&}}
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[xetex, bookmarks, colorlinks, breaklinks, pdftitle={Curriculum Vitae},pdfauthor={Eliza Weisman}]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} 
+\signature{Eliza Weisman}
+\address{990 First St.\\
+Meadville, PA, \texttt{16335}\\
+U.S.A.\\[.2cm]
+Phone: \texttt{+1 (814)-853-1501}\\
+%Fax: \texttt{609-924-8399}\\[.2cm]
+Email: \href{mailto:eliza@elizas.website}{\texttt{eliza@elizas.website}}}
+% DOCUMENT
+\begin{document}
+
+\begin{letter}{
+EYEBEAM \\
+34 35th St. \\
+5th Fl, Unit 26 \\
+Brooklyn, NY, \texttt{11232}
+}
+\opening{Dear Search Committee,}
+
+Please accept the enclosed documents as an application for the Creative Technology Intern position for the summer of 2017.
+
+My artistic works engage with the themes of mysticism, the technoculture, and social criticism, through a combination of interactive art, installation, and performance. Making extensive use of new media and emerging technologies, my work also engages critically with the culture of these forms. I have studied digital media from both the perspective of art-making and that of computer science, and draw upon both to inform my artistic practice both technically and aesthetically. Furthermore, I have experience using electronics, embedded systems, robotics, and Internet of Things technologies, video, photography, and the biological sciences as modes of artistic expression. The art-making and research that Eyebeam facilitates is directly in line with my interests and skills.
+
+Previously, I have...
+\closing{Sincerely.}
+\end{letter}
+
+\end{document}

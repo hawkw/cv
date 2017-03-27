@@ -1,0 +1,108 @@
+%------------------------------------
+% Dario Taraborelli
+% Typesetting your academic CV in LaTeX
+%
+% URL: http://nitens.org/taraborelli/cvtex
+% DISCLAIMER: This template is provided for free and without any guarantee 
+% that it will correctly compile on your system if you have a non-standard  
+% configuration.
+% Some rights reserved: http://creativecommons.org/licenses/by-sa/3.0/
+%------------------------------------
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, a4paper]{article}
+\usepackage{fontspec} 
+
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{a4paper, textwidth=5.5in, textheight=8.5in, marginparsep=7pt, marginparwidth=.6in}
+\setlength\parindent{0in}
+\usepackage[usenames,dvipsnames]{color}
+% FONTS
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+\setromanfont [Ligatures={Common}, Numbers={OldStyle}]{Hoefler Text}
+\setmonofont[Scale=0.8]{Bitstream Vera Sans Mono} 
+\setsansfont[Scale=0.9]{Optima Regular} 
+% ---- CUSTOM AMPERSAND
+\newcommand{\amper}{{\fontspec[Scale=.95]{Hoefler Text}\selectfont\itshape\&}}
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{7pt}
+\reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\mdseries\Large\upshape} 
+\subsectionfont{\rmfamily\mdseries\scshape\normalsize} 
+\subsubsectionfont{\rmfamily\bfseries\upshape\normalsize} 
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[xetex, bookmarks, colorlinks, breaklinks, pdftitle={Curriculum Vitae},pdfauthor={Eliza Weisman}]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} 
+
+% DOCUMENT
+\begin{document}
+{\LARGE Eliza Weisman}\\[.2cm]
+990 First St.\\
+Meadville, PA, \texttt{16335}\\
+U.S.A.\\[.2cm]
+Phone: \texttt{+1 (814)-853-1501}\\
+%Fax: \texttt{609-924-8399}\\[.2cm]
+Email: \href{mailto:eliza@elizas.website}{\texttt{eliza@elizas.website}}\\
+\textsc{url}: \href{https://elizas.website}{\texttt{https://elizas.website}}\\ 
+%Born:  March 12, 1879---Ulm, Germany\\
+%Nationality:  German/American
+
+%%\hrule
+\section*{Exhibitions \amper{} Performances}
+
+\subsection*{Exhibitions}
+
+\noindent\years{2017}\textit{Upstairs}, with Dave Ambroso; Art-Partment, Meadville, PA \\
+\years{2016} \textit{Figure it Out}; The Boxx Gallery, Meadville, PA \\
+\years{2016} \textit{2015-2016 Art Student Show}; Bowman-Penelec-Megahan Art Gallery, Meadville, PA \\
+\years{2015} \textit{Water, Water, Everywhere}; Bowman-Penelec-Megahan Art Gallery, Meadville, PA \\
+
+\subsection*{Performances}
+\noindent\years{2017}\textit{Biophone}; Art-Partment, Meadville, PA \\
+\years{2015}\textit{Open-Source Estrogen}; with Byron Rich \amper{} Mary Tsang. \\
+	Appeared in \href{https://vimeo.com/199002358}{a short video}.
+
+\section*{Grants, Honors, \amper{} Awards}
+\years{2016} Art Department Purchase Prize; Boweman-Penelec-Megahan Art Gallery. \\ 
+	Received for \textit{Sigil 01}.
+
+
+%\hrule
+\section*{Education}
+
+\noindent\years{2017}\textsc{BS} in Applied Computing, minor in Studio Art, Allegheny College\\
+
+%\hrule
+\section*{Technical Skills}
+
+\textsc{Technologies \amper{} Media:}
+Electronics fabrication, digital photography, Arduino, Processing, HTML \amper{} CSS \\
+\textsc{Programming Languages:} 
+Rust, Haskell, Scala, Java, Python, C \amper{} C++\\
+\textsc{Software:}
+Adobe Photoshop, Adobe InDesign, Adobe Illustrator \\
+
+
+
+\begin{center}
+{\scriptsize  Last updated: \today\- •\- Typeset in \href{http://nitens.org/taraborelli/cvtex}{
+\fontspec{Times New Roman}\XeTeX }\\
+% ---- FILL IN THE FULL URL TO YOUR CV HERE
+\href{https://elizas.website/portfolio/cv}{https://elizas.website/portfolio/cv}}
+\end{center}
+
+\end{document}
